@@ -462,13 +462,17 @@ function quickVideo() {
     document.addEventListener('keydown',e => {
         if(e.key == 'd' && qv.checked) {
             const video = document.getElementsByClassName('html5-main-video')[0];
+            const popup = document.getElementsByClassName('ytp-overlay ytp-speedmaster-overlay')[0];
             video.playbackRate = 2;
+            popup.style.display = 'unset';
         }
     });
     document.addEventListener('keyup',e => {
         if(e.key == 'd' && qv.checked) {
             const video = document.getElementsByClassName('html5-main-video')[0];
+            const popup = document.getElementsByClassName('ytp-overlay ytp-speedmaster-overlay')[0];
             video.playbackRate = 1;
+            popup.style.display = 'none';
         }
     });
 }
